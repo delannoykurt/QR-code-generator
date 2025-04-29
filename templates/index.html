@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Générateur de QR Code 🔳</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h1>🔳 Générateur de QR Code 🔳</h1>
+
+            <form method="post">
+                <label for="qrdata">Entrez votre texte ou URL :</label><br />
+                <input
+                    type="text"
+                    id="qrdata"
+                    name="qrdata"
+                    placeholder="https://exemple.com"
+                    required
+                /><br /><br />
+
+                <button type="submit">Générer le QR Code</button>
+            </form>
+
+            <div class="footer">
+                <p>✨ Projet réalisé en Python et Flask</p>
+            </div>
+        </div>
+    </body>
+</html>
