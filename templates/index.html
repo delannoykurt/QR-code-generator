@@ -24,6 +24,20 @@
 
                 <button type="submit">Générer le QR Code</button>
             </form>
+            {% if qr_img %}
+            <h2>Votre QR Code :</h2>
+            <img
+                src="{{ url_for('qrcode_file', filename=qr_img) }}"
+                alt="QR Code"
+            />
+            <br /><br />
+            <a
+                href="{{ url_for('qrcode_file', filename=qr_img) }}"
+                download="qrcode.png"
+            >
+                <button type="button">Télécharger</button>
+            </a>
+            {% endif %}
 
             <div class="footer">
                 <p>✨ Projet réalisé en Python et Flask</p>
